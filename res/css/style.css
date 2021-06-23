@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parallax-container {
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.parallax-container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.parallax-text {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    padding: 1em;
+    color: rgb(38, 38, 165);
+    font-weight: 700;
+    font-size: 2rem;
+    border: solid 2px brown;
+    border-radius: 0.8em;
+}
+
+.parallax-text:hover {
+    cursor: move;
+    box-shadow: 5px 13px 30px -18px rgb(168, 53, 53);
+    text-shadow: 2px 5px 8px rgba(212, 143, 79, 0.835);
+}
+
+.one {
+    background-image: url(/res/images/parallax/city.jpg);
+}
+
+.one::before {
+    background-color: rgba(240, 236, 236, 0.2);
+}
+
+.two {
+    background-image: url(/res/images/parallax/blur.jpg)
+}
+
+.two::before {
+    background-color: rgba(240, 236, 236, 0);
+}
+
+.three {
+    background-image: url(/res/images/parallax/ncity.jpg);
+}
+
+.three::before {
+    background-color: rgba(248, 246, 246, 0);
+}
+
+.text {
+    padding: 20px;
+    align-items: center;
+    font-size: calc(8px + 1vw);
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    padding: 2em;
+    height: calc(20px + 48vh);
+    background-color: beige;
+    text-align: center;
+}
+
+.footer h2 {
+    color: blue;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.footer h3 {
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    right: 1px;
+    transform: translate(0, -50%);
+    background-color: antiquewhite;
+    background-clip: content-box;
+}
